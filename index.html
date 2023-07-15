@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiper motion</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <h1>DCODELAB</h1>
+  <main>
+    <section class="swiper-wrapper">
+      <article class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="/images/pic1.png" alt="pic1">
+            <h2>sit amet consectetur adipisicing elit.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, distinctio.</p>
+          </div>
+        </div>
+      </article>
+      <article class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="/images/pic2.png" alt="pic2">
+            <h2>dignissimos aperiam ipsum.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, voluptas?</p>
+          </div>
+        </div>
+      </article>
+      <article class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="/images/pic3.png" alt="pic3">
+            <h2>Voluptatem, fuga.</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, eveniet.</p>
+          </div>
+        </div>
+      </article>
+      <article class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="/images/pic4.png" alt="pic4">
+            <h2>Aliquam qui sapiente repellendus.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, commodi?</p>
+          </div>
+        </div>
+      </article>
+      <article class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="/images/pic5.png" alt="pic5">
+            <h2>Inventore aspernatur reiciendis.</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, autem.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <nav class="swiper-pagination"></nav>
+
+    <nav class="swiper-button-prev navi"></nav>
+    <nav class="swiper-button-next navi"></nav>
+  </main>
+
+  <footer>
+    2023 DCODELAB &copy; ALL RIGHTS RESERVED.
+  </footer>
+
+  <script>
+    const swiper = new Swiper('main',{
+      speed: 500,
+      loop: true,
+      direction: 'horizontal', //horizontal 가로, vertical 세로 방향
+      grabCursor : true,
+      slidesPerView: 'auto', //숫자값 넣으면 해당 갯수 단위로 패널 보임, auto : 100% 특정 크기 지정
+      spaceBetween: 30, //패널사이 간격(px)
+      centeredSlides: true, //활성화 패널을 항상 가운데로 배치
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction'
+        // clickable: true
+      },
+      navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next'
+      },
+      effect: 'coverflow',
+      coverflowEffect: {
+        rotate: 50, //y축 회전 각도
+        stretch: -100, //당겨짐 정도
+        depth: 400, //입체적인 왜곡효과 정도
+        slideShadows: false //패널의 그림자 설정
+      }
+    });
+  </script>
+</body>
+</html>
